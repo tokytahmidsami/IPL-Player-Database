@@ -1,0 +1,6 @@
+.image-view {
+    -fx-shape: "M 0,50 A 50,50 0 1,1 100,50 A 50,50 0 1,1 0,50 Z";
+    -fx-background-radius: 50%;
+    -fx-fit-height: 100px;
+    -fx-fit-width: 100px;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" prefHeight="42.0" prefWidth="631.0" style="-fx-background-color: rgba(50, 200, 200, 0.2); -fx-spacing: 1;" fx:controller="Project.controller_classes.CountryWiseCountBarController">
+    <children>
+        <Label fx:id="countryName" alignment="CENTER" prefHeight="65.0" prefWidth="260.0" style="-fx-text-fill: black;" text="Country Name" textAlignment="CENTER">
+            <font>
+                <Font name="Helvetica Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="playerCount" alignment="CENTER" prefHeight="47.0" prefWidth="260.0" style="-fx-text-fill: black;" text="Player Count" textAlignment="CENTER">
+            <font>
+                <Font name="Helvetica Bold" size="16.0" />
+            </font>
+        </Label>
+    </children>
+</HBox>

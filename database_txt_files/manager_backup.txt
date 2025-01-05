@@ -1,0 +1,9 @@
+Mumbai Indians,mumbaiindians
+Punjab Kings,punjabkings
+Sunrisers Hyderabad,sunrisershyderabad
+Delhi Capitals,delhicapitals
+Pune Warriors India,punewarriorsindia
+Rajasthan Royals,rajasthanroyals
+Royal Challengers Bangalore,royalchallengersbangalore
+Kolkata Knight Riders,kolkataknightriders
+Chennai Super Kings,chennaisuperkings

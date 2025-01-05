@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, darkblue, black);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.controller_classes.TradePlayerController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0" onMouseEntered="#updatePlayerList" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/serverConnectingMain.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="29.0" layoutY="14.0" style="-fx-text-fill: white;" text="Login status:">
+         <font>
+            <Font name="Helvetica Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginStatusLabel" layoutX="29.0" layoutY="30.0" style="-fx-text-fill: white;" text="....">
+         <font>
+            <Font name="Helvetica Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="lock" fitHeight="150.0" fitWidth="200.0" layoutX="525.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="requiredText1" layoutX="505.0" layoutY="140.0" style="-fx-text-fill: white; -fx-background-color: rgba(0, 20, 60, 0.6);" text="Manager Section" visible="false">
+         <font>
+            <Font name="Helvetica Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="requiredText2" layoutX="495.0" layoutY="340.0" prefHeight="67.0" prefWidth="216.0" style="-fx-text-fill: white; -fx-background-color: rgba(0, 20, 60, 0.6);" text="Manager Login Required" textAlignment="CENTER" visible="false" wrapText="true">
+         <font>
+            <Font name="Helvetica Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="355.0" layoutY="13.0" style="-fx-text-fill: white;" text="Market">
+         <font>
+            <Font name="Helvetica Bold" size="28.0" />
+         </font>
+      </Label>
+      <Line endX="612.5" endY="-26.0" layoutX="177.0" layoutY="80.0" startX="-166.5" startY="-26.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4313725531101227" green="0.49803921580314636" blue="0.8823529481887817" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5053609428711736">
+                     <color>
+                        <Color red="0.02217348851263523" green="0.03371507301926613" blue="0.3684210479259491" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4313725531101227" green="0.49803921580314636" blue="0.8823529481887817" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <ScrollPane fx:id="playerListPane" layoutX="260.0" layoutY="122.0" onMouseEntered="#updatePlayerList" onScroll="#updatePlayerList" prefHeight="130.0" prefWidth="530.0" stylesheets="@../css_files/scrollPane.css">
+         <content>
+            <VBox fx:id="vbox" prefHeight="115.0" prefWidth="526.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="97.0" layoutY="56.0" style="-fx-text-fill: white;" text="Filters">
+         <font>
+            <Font name="Helvetica Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="402.0" layoutY="56.0" style="-fx-text-fill: white;" text="Players on Market">
+         <font>
+            <Font name="Helvetica Bold" size="24.0" />
+         </font>
+      </Label>
+      <Pane fx:id="playerInfo" layoutX="260.0" layoutY="295.0" prefHeight="200.0" prefWidth="530.0" style="-fx-background-color: rgba(50, 200, 200, 0.2); -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white;">
+         <children>
+            <ImageView fx:id="playerImage" fitHeight="175.0" fitWidth="150.0" layoutX="14.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/players/batsman.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="184.0" layoutY="12.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Name:">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerName" layoutX="236.0" layoutY="12.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="....">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="58.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Club:">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="35.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Country:">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="81.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Age:">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="104.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Height:">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="127.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Joursey No.:">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="150.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Position:">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="173.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Weekly Salary:">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerCountry" layoutX="249.0" layoutY="36.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="....">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerClub" layoutX="229.0" layoutY="59.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="....">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerAge" layoutX="225.0" layoutY="82.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="....">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerHeight" layoutX="237.0" layoutY="105.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="....">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerJourseyNo" layoutX="276.0" layoutY="128.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="....">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerPosition" layoutX="249.0" layoutY="151.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="....">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerWeeklySalary" layoutX="289.0" layoutY="174.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="....">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="294.0" layoutY="260.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Player Info">
+         <font>
+            <Font name="Helvetica Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="46.0" fitWidth="43.0" layoutX="747.0" layoutY="6.0" onMouseClicked="#goToMainMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/exit.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="632.0" layoutY="20.0" style="-fx-text-fill: white;" text="Back to Main Menu">
+         <font>
+            <Font name="Helvetica Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="refresh" layoutX="18.0" layoutY="400.0" mnemonicParsing="false" onAction="#processRefresh" prefHeight="43.0" prefWidth="110.0" style="-fx-font-size: 13;" stylesheets="@../css_files/loginButtons.css" text="Refresh" textAlignment="CENTER" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label alignment="CENTER" layoutX="260.0" layoutY="92.0" prefHeight="30.0" prefWidth="530.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 200, 200, 0.2);" text="   Name                      |            Trade Option" textAlignment="CENTER">
+         <font>
+            <Font name="Helvetica Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="sellToMarket" layoutX="18.0" layoutY="448.0" mnemonicParsing="false" onAction="#goToSellToMarket" prefHeight="46.0" prefWidth="230.0" style="-fx-font-size: 13;" stylesheets="@../css_files/loginButtons.css" text="Sell to Market" textAlignment="CENTER" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="playerOnMarketCount" alignment="CENTER" layoutX="616.0" layoutY="54.0" style="-fx-text-fill: white;" text="()" textAlignment="CENTER">
+         <font>
+            <Font name="Helvetica Bold" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="540.0" layoutY="271.0" style="-fx-background-color: rgba(50, 200, 200, 0.2);" />
+      <Pane layoutX="648.0" layoutY="270.0" prefHeight="23.0" prefWidth="142.0" style="-fx-background-color: rgba(50, 200, 200, 0.2); -fx-border-color: white;">
+         <children>
+            <Label fx:id="playerPrice" alignment="CENTER_RIGHT" layoutY="1.0" prefHeight="21.0" prefWidth="136.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="... Rs" textAlignment="RIGHT">
+               <font>
+                  <Font name="Helvetica Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="591.0" layoutY="271.0" style="-fx-text-fill: white; -fx-background-color: rgba(50, 20, 20, 0.4);" text="Price:">
+         <font>
+            <Font name="Helvetica Bold" size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="17.0" layoutY="92.0" prefHeight="304.0" prefWidth="237.0" style="-fx-background-color: rgba(0, 0, 0, 1);">
+         <content>
+            <VBox fx:id="filterVBox" alignment="CENTER" prefHeight="636.0" prefWidth="220.0" style="-fx-background-color: rgba(50, 200, 240, 0.5); -fx-padding: 10; -fx-spacing: 10;">
+               <children>
+                  <TextField fx:id="playerNameInput" prefHeight="26.0" prefWidth="216.0" promptText="Player Name" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label text="Country:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="playerCountryInput" prefHeight="34.0" prefWidth="203.0" promptText="Country" style="-fx-background-color: rgba(50, 150, 150, 0.8); -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <Label text="Club:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="playerClubInput" prefHeight="37.0" prefWidth="203.0" promptText="Club" style="-fx-background-color: rgba(50, 150, 150, 0.8); -fx-border-color: white; -fx-border-radius: 15; -fx-background-radius: 15;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <Label text="Position:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="playerPositionInput" prefHeight="34.0" prefWidth="202.0" promptText="Position" style="-fx-background-color: rgba(50, 150, 150, 0.8); -fx-border-color: white; -fx-background-radius: 15; -fx-border-radius: 15;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <Label text="Price:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="priceLowerLimitInput" prefHeight="26.0" prefWidth="99.0" promptText="Lower Limit" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="priceUpperLimitInput" prefHeight="26.0" prefWidth="99.0" promptText="Upper Limit" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label text=" Age:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ageLowerLimitInput" prefHeight="26.0" prefWidth="99.0" promptText="Lower Limit" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="ageUpperLimitInput" prefHeight="26.0" prefWidth="99.0" promptText="Upper Limit" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label text=" Height:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="heightLowerLimitInput" prefHeight="26.0" prefWidth="99.0" promptText="Lower Limit" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="heightUpperLimitInput" prefHeight="26.0" prefWidth="99.0" promptText="Upper Limit" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label text=" Salary:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="salaryLowerLimitInput" prefHeight="26.0" prefWidth="99.0" promptText="Lower Limit" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="salaryUpperLimitInput" prefHeight="26.0" prefWidth="99.0" promptText="Upper Limit" style="-fx-border-color: white;" stylesheets="@../css_files/promptBoxes.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button fx:id="SetFilterButton" layoutX="140.0" layoutY="400.0" mnemonicParsing="false" onAction="#setAndApplyFilters" prefHeight="43.0" prefWidth="110.0" style="-fx-font-size: 13;" stylesheets="@../css_files/loginButtons.css" text="Apply" textAlignment="CENTER" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

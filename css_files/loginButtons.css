@@ -1,0 +1,23 @@
+.button {
+    -fx-background-color: rgba(50, 200, 200, 0.7);
+    -fx-text-fill: white;
+    -fx-border-color: rgba(50, 200, 200, 1);
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 24px;
+    -fx-font-size: 16px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-background-color: rgba(50, 200, 200, 1);
+    -fx-border-color: rgba(50, 200, 200, 1);
+    -fx-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:focus {
+    -fx-outline: none;
+    -fx-box-shadow: 0 0 0 4px rgba(50, 200, 200, 0.5);
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.controller_classes.ServerConnectingController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/error404.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="107.0" layoutY="205.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="45.0" prefWidth="125.0" stylesheets="@../css_files/exitButton.css" text="EXIT" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="568.0" AnchorPane.topAnchor="205.0">
+         <font>
+            <Font name="Baloo 2 ExtraBold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

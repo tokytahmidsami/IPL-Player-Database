@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, darkblue, black);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.controller_classes.MainMenuController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/serverConnectingMain.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logOut" fitHeight="38.0" fitWidth="45.0" layoutX="748.0" layoutY="8.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logout.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="687.0" layoutY="18.0" style="-fx-background-color: rgba(0, 50, 100, 0.5); -fx-text-fill: white;" text="Log Out">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutX="20.0" layoutY="61.0" prefHeight="425.0" prefWidth="371.0" style="-fx-background-color: rgba(50, 200, 200, 0.2); -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white;">
+         <children>
+            <Label layoutX="94.0" layoutY="21.0" style="-fx-text-fill: white;" text="General Section">
+               <font>
+                  <Font name="Helvetica Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="searchPlayer" layoutX="17.0" layoutY="314.0" mnemonicParsing="false" onAction="#goToSearchPlayerWindow" stylesheets="@../css_files/loginButtons.css" text="Search Players" />
+            <Button fx:id="searchClub" layoutX="205.0" layoutY="314.0" mnemonicParsing="false" onAction="#goToSearchClubWindow" stylesheets="@../css_files/loginButtons.css" text="Search Clubs" />
+            <Pane layoutX="23.0" layoutY="106.0" prefHeight="143.0" prefWidth="143.0" style="-fx-background-color: linear-gradient(to top right, teal, navy); -fx-background-radius: 100;">
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="133.0" layoutX="5.0" layoutY="21.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/player.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="205.0" layoutY="106.0" prefHeight="143.0" prefWidth="143.0" style="-fx-background-color: linear-gradient(to top right, teal, navy); -fx-background-radius: 100;">
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="133.0" layoutX="5.0" layoutY="21.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/club.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="managerSection" layoutX="415.0" layoutY="61.0" prefHeight="425.0" prefWidth="371.0" style="-fx-background-color: rgba(50, 200, 200, 0.2); -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white;">
+         <children>
+            <Label layoutX="89.0" layoutY="22.0" style="-fx-text-fill: white;" text="Manager Section">
+               <font>
+                  <Font name="Helvetica Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="addPlayer" layoutX="33.0" layoutY="314.0" mnemonicParsing="false" onAction="#goToAddPlayerWindow" stylesheets="@../css_files/loginButtons.css" text="Add Player" />
+            <Button fx:id="tradePlayer" layoutX="207.0" layoutY="314.0" mnemonicParsing="false" onAction="#goToTradePlayerWindow" stylesheets="@../css_files/loginButtons.css" text="Trade Player" />
+            <Pane layoutX="25.0" layoutY="106.0" prefHeight="143.0" prefWidth="143.0" style="-fx-background-color: linear-gradient(to top right, teal, navy); -fx-background-radius: 100;">
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="133.0" layoutX="18.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/add-button.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="205.0" layoutY="106.0" prefHeight="143.0" prefWidth="143.0" style="-fx-background-color: linear-gradient(to top right, teal, navy); -fx-background-radius: 100;">
+               <children>
+                  <ImageView fitHeight="99.0" fitWidth="105.0" layoutX="22.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trade.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="29.0" layoutY="14.0" style="-fx-text-fill: white;" text="Login status:">
+         <font>
+            <Font name="Helvetica Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginStatusLabel" layoutX="29.0" layoutY="30.0" style="-fx-text-fill: white;" text="....">
+         <font>
+            <Font name="Helvetica Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="lock" fitHeight="150.0" fitWidth="200.0" layoutX="525.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="requiredText1" layoutX="505.0" layoutY="140.0" style="-fx-text-fill: white; -fx-background-color: rgba(0, 20, 60, 0.6);" text="Manager Section" visible="false">
+         <font>
+            <Font name="Helvetica Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="requiredText2" layoutX="495.0" layoutY="340.0" prefHeight="67.0" prefWidth="216.0" style="-fx-text-fill: white; -fx-background-color: rgba(0, 20, 60, 0.6);" text="Manager Login Required" textAlignment="CENTER" visible="false" wrapText="true">
+         <font>
+            <Font name="Helvetica Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

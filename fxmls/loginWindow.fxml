@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.controller_classes.LogInController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/serverConnectingMain.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="23.0" layoutY="21.0" prefHeight="459.0" prefWidth="399.0" style="-fx-background-color: rgba(50, 200, 200, 0.2); -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="378.0" AnchorPane.topAnchor="21.0">
+         <children>
+            <Label layoutX="167.0" layoutY="22.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="asUserLogin" layoutX="42.0" layoutY="314.0" mnemonicParsing="false" onAction="#goToUserLoginWindow" stylesheets="@../css_files/loginButtons.css" text="As User" />
+            <Button fx:id="asClubManagerLogin" layoutX="200.0" layoutY="314.0" mnemonicParsing="false" onAction="#goToClubManagerLoginWindow" stylesheets="@../css_files/loginButtons.css" text="As Club Manager" />
+            <ImageView fitHeight="131.0" fitWidth="133.0" layoutX="27.0" layoutY="129.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="131.0" fitWidth="133.0" layoutX="216.0" layoutY="129.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/manager.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="40.0" fitWidth="45.0" layoutX="746.0" layoutY="14.0" onMouseClicked="#quitApplication" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quit.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

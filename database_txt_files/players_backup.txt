@@ -1,0 +1,66 @@
+Virat Kohli,Barbados,32,1.76,Punjab Kings,Batsman,11,1900000
+Rohit Sharma,India,34,1.73,Punjab Kings,Batsman,10,2200000
+David Warner,Australia,36,1.70,Sunrisers Hyderabad,Batsman,12,2100000
+MS Dhoni,India,39,1.75,Kashmir Warriors,Wicketkeeper,14,2500000
+AB de Villiers,South Africa,37,1.78,Royal Challengers Bangalore,Batsman,11,2400000
+Shikhar Dhawan,India,35,1.74,Pune Warriors India,Batsman,10,2000000
+Andre Russell,Jamaica,33,1.85,Sunrisers Hyderabad,Allrounder,13,2300000
+Steve Smith,Australia,34,1.76,Delhi Capitals,Batsman,10,2200000
+Faf du Plessis,South Africa,37,1.78,Chennai Super Kings,Batsman,12,2300000
+KL Rahul,India,31,1.78,Pune Warriors India,Batsman,9,1900000
+Hardik Pandya,India,29,1.83,Mumbai Indians,Allrounder,12,2000000
+Kieron Pollard,Trinidad and Tobago,35,1.96,Mumbai Indians,Allrounder,11,2100000
+Rashid Khan,Islamic Emirate of Afghanistan,24,1.72,Sunrisers Hyderabad,Bowler,14,2400000
+Jasprit Bumrah,India,28,1.78,Mumbai Indians,Bowler,12,2200000
+Dinesh Karthik,India,37,1.70,Kolkata Knight Riders,Wicketkeeper,10,1900000
+Ravindra Jadeja,India,34,1.73,Chennai Super Kings,Allrounder,11,2300000
+Pat Cummins,Australia,30,1.92,Kolkata Knight Riders,Bowler,9,2100000
+Ben Stokes,England,33,1.85,Rajasthan Royals,Allrounder,12,2500000
+Mohammad Nabi,Islamic Emirate of Afghanistan,38,1.75,Sunrisers Hyderabad,Allrounder,8,1800000
+Sam Curran,England,26,1.80,Chennai Super Kings,Allrounder,10,1900000
+Kane Williamson,New Zealand,33,1.83,Sunrisers Hyderabad,Batsman,11,2200000
+Eoin Morgan,England,36,1.78,Kashmir Warriors,Batsman,13,2100000
+Shane Watson,Australia,41,1.83,Chennai Super Kings,Allrounder,10,2300000
+Chris Gayle,Jamaica,42,1.88,Punjab Kings,Batsman,12,2400000
+Yuzvendra Chahal,India,32,1.68,Royal Challengers Bangalore,Bowler,13,1900000
+Kuldeep Yadav,India,29,1.72,Pune Warriors India,Bowler,11,2000000
+Aaron Finch,Australia,37,1.73,Rajasthan Royals,Batsman,10,2100000
+Marcus Stoinis,Australia,33,1.85,Pune Warriors India,Allrounder,12,2200000
+Imran Tahir,South Africa,45,1.78,Chennai Super Kings,Bowler,9,1800000
+Deepak Chahar,India,30,1.80,Chennai Super Kings,Bowler,13,1900000
+Shreyas Iyer,India,29,1.80,Pune Warriors India,Batsman,14,2000000
+Nicholas Pooran,West Indies,28,1.75,Sunrisers Hyderabad,Wicketkeeper,12,2100000
+Chris Morris,South Africa,35,1.93,Rajasthan Royals,Allrounder,10,2300000
+Glenn Maxwell,Australia,34,1.80,Royal Challengers Bangalore,Allrounder,11,2400000
+Mitchell Starc,Australia,34,1.96,Pune Warriors India,Bowler,8,2000000
+Axar Patel,India,30,1.82,Pune Warriors India,Allrounder,11,2200000
+Washington Sundar,India,25,1.75,Sunrisers Hyderabad,Allrounder,13,1900000
+Mohammed Shami,India,34,1.78,Punjab Kings,Bowler,12,2200000
+Adam Zampa,Australia,31,1.75,Rajasthan Royals,Bowler,9,1800000
+Trent Boult,New Zealand,34,1.85,Rajasthan Royals,Bowler,10,2400000
+Quinton de Kock,South Africa,31,1.73,Mumbai Indians,Wicketkeeper,12,2100000
+Ishant Sharma,India,36,1.93,Pune Warriors India,Bowler,8,1800000
+Tim Southee,New Zealand,34,1.92,Kolkata Knight Riders,Bowler,10,1900000
+Varun Chakravarthy,India,32,1.80,Kolkata Knight Riders,Bowler,13,2000000
+Bhuvneshwar Kumar,India,34,1.78,Sunrisers Hyderabad,Bowler,11,2300000
+Josh Hazlewood,Australia,33,1.96,Royal Challengers Bangalore,Bowler,9,2100000
+Sanju Samson,India,30,1.78,Rajasthan Royals,Wicketkeeper,12,2200000
+Ruturaj Gaikwad,India,27,1.75,Chennai Super Kings,Batsman,14,2000000
+Shakib Al Hasan,Bangladesh,35,1.75,Kolkata Knight Riders,Allrounder,13,2200000
+Mustafizur Rahman,Bangladesh,28,1.80,Pune Warriors India,Bowler,12,2000000
+Liton Das,Bangladesh,29,1.73,Delhi Capitals,Wicketkeeper,10,1900000
+Taskin Ahmed,Bangladesh,29,1.88,Rajasthan Royals,Bowler,11,2100000
+Mehidy Hasan Miraz,Bangladesh,27,1.70,Sunrisers Hyderabad,Allrounder,12,2000000
+Afif Hossain,Bangladesh,24,1.75,Pune Warriors India,Allrounder,9,1800000
+Mohammad Saifuddin,Bangladesh,28,1.77,Punjab Kings,Allrounder,10,1900000
+Tamim Iqbal,Bangladesh,35,1.75,Pune Warriors India,Batsman,8,1800000
+Mashrafe Mortaza,Bangladesh,41,1.84,Mumbai Indians,Bowler,9,2000000
+Nurul Hasan,Bangladesh,30,1.72,Pune Warriors India,Wicketkeeper,10,1800000
+Nasum Ahmed,Bangladesh,29,1.78,Sunrisers Hyderabad,Bowler,11,1900000
+Mohammad Naim,Bangladesh,25,1.80,Rajasthan Royals,Batsman,9,2000000
+Virat Kohli Jr.,India,22,1.89,Punjab Kings,Batsman,2,1800000
+Mahmudullah Riad,Bangladesh,35,1.73,Punjab Kings,Batsman,2,1500000
+Muhtasim Ferdous Ruhan,Islamic Emirate of Afghanistan,22,1.68,Royal Challengers Bangalore,Bowler,14,1200000
+Zahid Hasan Mehrab,Bangladesh,22,1.70,Kashmir Warriors,Allrounder,23,2300000
+Shahid Ali,Islamic Emirate of Afghanistan,30,1.81,Kashmir Warriors,Weecketkeeper,3,1700000
+Virat Kohli New,Islamic Emirate of Afghanistan,32,1.78,Mumbai Indians,Batsman,7,1200000

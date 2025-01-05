@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="playerInfoBar" onMouseEntered="#active" onMouseExited="#inactive" prefHeight="36.0" prefWidth="549.0" style="-fx-background-color: rgba(50, 200, 200, 0.2); -fx-spacing: 1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.controller_classes.PlayerInfoBarController">
+    <children>
+        <Label fx:id="playerName" alignment="CENTER" prefHeight="30.0" prefWidth="280.0" style="-fx-text-fill: black; -fx-label-padding: 5;" text="Player Name" textAlignment="CENTER">
+            <font>
+                <Font name="Helvetica Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="playerClub" alignment="CENTER" prefHeight="30.0" prefWidth="292.0" style="-fx-text-fill: black; -fx-label-padding: 5;" text="Player Club">
+            <font>
+                <Font name="Helvetica Bold" size="14.0" />
+            </font>
+        </Label>
+    </children>
+</HBox>
