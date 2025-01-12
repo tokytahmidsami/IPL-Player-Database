@@ -17,14 +17,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class ManagerLogInController{
     @FXML Button backToLogin, login, signUp;
     @FXML ComboBox<String> managerID;
-    @FXML TextField password, newManagerID, newPassword;
+    @FXML TextField textPassword, newManagerID, textNewPassword;
+    @FXML PasswordField password, newPassword;
+    @FXML ImageView passView, newPassView;
+    boolean showPass = false, showNewPass = false;
     Socket clientSocket;
     Stage stage;
     User manager;
@@ -48,6 +54,20 @@ public class ManagerLogInController{
             managerIDs = feedback.getResults();
             System.out.println("managers: " + managerIDs);
             managerID.getItems().addAll(managerIDs);
+            
+            password.textProperty().bindBidirectional(textPassword.textProperty());
+            passView.setImage(new Image("Project/images/showpass.png"));
+            password.setVisible(true);
+            password.setManaged(true);
+            textPassword.setVisible(false);
+            textPassword.setManaged(false);
+
+            newPassword.textProperty().bindBidirectional(textNewPassword.textProperty());
+            newPassView.setImage(new Image("Project/images/showpass.png"));
+            newPassword.setVisible(true);
+            newPassword.setManaged(true);
+            textNewPassword.setVisible(false);
+            textNewPassword.setManaged(false);
         }
         else
             AlertBox.showError("Error fetching list. Go back.");
@@ -164,5 +184,43 @@ public class ManagerLogInController{
             controller.goAhead(clientSocket, stage);
         });
         pause.play();
+    }
+
+    public void toggleShow(){
+        if(!showPass){
+            showPass = true;
+            passView.setImage(new Image("Project/images/hidepass.png"));
+            password.setVisible(false);
+            password.setManaged(false);
+            textPassword.setVisible(true);
+            textPassword.setManaged(true);
+        }
+        else{
+            showPass = false;
+            passView.setImage(new Image("Project/images/showpass.png"));
+            password.setVisible(true);
+            password.setManaged(true);
+            textPassword.setVisible(false);
+            textPassword.setManaged(false);
+        }
+    }
+
+    public void toggleNewShow(){
+        if(!showNewPass){
+            showNewPass = true;
+            newPassView.setImage(new Image("Project/images/hidepass.png"));
+            newPassword.setVisible(false);
+            newPassword.setManaged(false);
+            textNewPassword.setVisible(true);
+            textNewPassword.setManaged(true);
+        }
+        else{
+            showNewPass = false;
+            newPassView.setImage(new Image("Project/images/showpass.png"));
+            newPassword.setVisible(true);
+            newPassword.setManaged(true);
+            textNewPassword.setVisible(false);
+            textNewPassword.setManaged(false);
+        }
     }
 }

@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -31,7 +32,8 @@
                   <Image url="@../images/manager.png" />
                </image>
             </ImageView>
-            <TextField fx:id="password" layoutX="20.0" layoutY="284.0" prefHeight="40.0" prefWidth="367.0" promptText="Enter Password" stylesheets="@../css_files/promptBoxes.css" />
+            <PasswordField fx:id="password" layoutX="22.0" layoutY="285.0" prefHeight="40.0" prefWidth="363.0" promptText="Enter Password" stylesheets="@../css_files/promptBoxes.css" />
+            <TextField fx:id="textPassword" layoutX="22.0" layoutY="285.0" prefHeight="40.0" prefWidth="363.0" promptText="Enter Password" stylesheets="@../css_files/promptBoxes.css" />
             <ImageView fitHeight="68.0" fitWidth="55.0" layoutX="20.0" layoutY="384.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/exit.png" />
@@ -50,6 +52,11 @@
                   <Font name="Helvetica Bold" size="20.0" />
                </font>
             </Label>
+            <ImageView fx:id="passView" fitHeight="40.0" fitWidth="39.0" layoutX="337.0" layoutY="286.0" onMousePressed="#toggleShow" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/showpass.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <Pane layoutX="439.0" layoutY="21.0" prefHeight="459.0" prefWidth="347.0" style="-fx-background-color: rgba(50, 200, 200, 0.2); -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white;">
@@ -65,8 +72,14 @@
                </image>
             </ImageView>
             <TextField fx:id="newManagerID" layoutX="16.0" layoutY="216.0" prefHeight="40.0" prefWidth="315.0" promptText="New Club Name (Used as Manager ID) " stylesheets="@../css_files/promptBoxes.css" />
-            <TextField fx:id="newPassword" layoutX="16.0" layoutY="285.0" prefHeight="40.0" prefWidth="315.0" promptText="Password (at least 8 characters suggested)" stylesheets="@../css_files/promptBoxes.css" />
+            <TextField fx:id="textNewPassword" layoutX="16.0" layoutY="285.0" prefHeight="40.0" prefWidth="315.0" promptText="Password" stylesheets="@../css_files/promptBoxes.css" />
+            <PasswordField fx:id="newPassword" layoutX="16.0" layoutY="285.0" prefHeight="40.0" prefWidth="315.0" promptText="Password" stylesheets="@../css_files/promptBoxes.css" />
             <Button fx:id="signUp" layoutX="117.0" layoutY="365.0" mnemonicParsing="false" onAction="#processSignUp" stylesheets="@../css_files/loginButtons.css" text="Register" />
+            <ImageView fx:id="newPassView" fitHeight="40.0" fitWidth="39.0" layoutX="285.0" layoutY="286.0" onMousePressed="#toggleNewShow" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/showpass.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>
